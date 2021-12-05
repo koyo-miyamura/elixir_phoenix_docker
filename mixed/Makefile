@@ -1,4 +1,4 @@
-.PHONY: setup
+.PHONY: setup_for_docker_user
 
 setup_for_docker_user:
 	cp docker/docker-compose.override.yml .
