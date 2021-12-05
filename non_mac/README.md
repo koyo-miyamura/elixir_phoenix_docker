@@ -2,7 +2,7 @@
 
 ```
 $ docker compose run --rm --no-deps web mix phx.new sample
-$ sample
+$ cd sample
 $ cp ../{docker-compose.yml,Dockerfile,Makefile} .
 ```
 
