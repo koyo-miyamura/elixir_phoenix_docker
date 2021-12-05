@@ -1,0 +1,26 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      target: build_as_root
+    command: mix phx.server
+    environment:
+      DB_HOST: db
+    links:
+      - db
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/work
+    working_dir: /work
+  db:
+    image: postgres:9.6-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+volumes:
+  dbdata:
