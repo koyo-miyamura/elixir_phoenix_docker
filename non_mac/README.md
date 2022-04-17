@@ -1,15 +1,15 @@
-1. Create project
+1. Execute `make`
+
+```
+$ make
+```
+
+2. Create project
 
 ```
 $ docker compose run --rm --no-deps web mix phx.new sample
 $ cd sample
-$ cp ../{docker-compose.yml,Dockerfile,Makefile} .
-```
-
-2. Execute `make`
-
-```
-$ make
+$ cp ../{docker-compose.yml,Dockerfile,Makefile,.env} .
 ```
 
 3. Fix `config/dev.exs`
