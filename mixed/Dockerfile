@@ -1,4 +1,4 @@
-FROM elixir:1.13-alpine AS base
+FROM elixir:1.14-alpine AS base
 
 RUN apk update && apk add \
   inotify-tools git build-base npm bash
