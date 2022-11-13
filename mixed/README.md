@@ -33,3 +33,6 @@ config :sample, SampleWeb.Endpoint,
 $ docker compose up -d
 $ docker compose exec web mix setup
 ```
+
+You can access following url and develop Phoenix application!
+http://localhost:4000/
