@@ -2,9 +2,11 @@
 
 Dockerfile and docker-compose.yml for multiple OS
 
-- mac
+- `mac`
   - For `Docker Desktop for Mac`
-- non_mac
+- `non_mac`
   - For not `Docker Desktop for Mac` like `Docker Desktop for Windows` (WSL2) and Linux and so on.
-- mixed
+  - `non_mac_with_livebook`
+    - with livebook.
+- `mixed`
   - For mixed OS project
