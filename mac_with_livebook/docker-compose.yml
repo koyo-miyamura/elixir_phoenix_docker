@@ -1,0 +1,36 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+    environment:
+      DB_HOST: db
+    links:
+      - db
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/work
+    working_dir: /work
+    command: elixir --sname sample@web --cookie sample -S mix phx.server # please change 'sample' into your app name.
+  db:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+  livebook:
+    image: livebook/livebook
+    volumes:
+      - ./livebook:/data
+    ports:
+      - 8080:8080
+    environment:
+      - LIVEBOOK_COOKIE=sample # please change 'sample' into your app name.
+      - LIVEBOOK_DEFAULT_RUNTIME=attached:sample@web:sample # please change 'sample' into your app name.
+      - LIVEBOOK_TOKEN_ENABLED=false
+      - LIVEBOOK_HOME=/data
+volumes:
+  dbdata:
