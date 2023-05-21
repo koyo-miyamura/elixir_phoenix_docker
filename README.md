@@ -12,3 +12,5 @@ Dockerfile and docker-compose.yml for multiple OS
     - with livebook.
 - `mixed`
   - For mixed OS project
+  - `mixed_with_livebook`
+    - with livebook.
