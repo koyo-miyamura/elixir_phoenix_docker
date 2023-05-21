@@ -37,5 +37,5 @@ $ docker compose exec web mix setup
 You can access following url and develop Phoenix application!
 http://localhost:4000/
 
-And you can access following url and use livebook as a powerful tool for development!
+And you can access following url and use `Livebook` as a powerful tool for development!
 http://localhost:8080/
