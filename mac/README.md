@@ -6,15 +6,19 @@ $ cd sample
 $ cp ../{docker-compose.yml,Dockerfile} .
 ```
 
-2. Fix `config/dev.exs`
+2. Fix `config/dev.exs` and `config/test.exs`
+
+Fix `config/dev.exs` and `config/test.exs`
 
 ```
 config :sample, Sample.Repo,
   ...
   hostname: System.get_env("DB_HOST") || "localhost",
+```
 
-...
+Fix `config/dev.exs`
 
+```
 config :sample, SampleWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
