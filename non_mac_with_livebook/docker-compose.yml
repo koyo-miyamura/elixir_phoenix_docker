@@ -27,7 +27,7 @@ services:
     volumes:
       - dbdata:/var/lib/postgresql/data
   livebook:
-    image: livebook/livebook
+    image: ghcr.io/livebook-dev/livebook
     volumes:
       - ./livebook:/data
     ports:
