@@ -14,3 +14,5 @@ Dockerfile and docker-compose.yml for multiple OS
   - For mixed OS project
   - `mixed_with_livebook`
     - with livebook.
+  - `mixed_debian`
+    - with Debian image.
