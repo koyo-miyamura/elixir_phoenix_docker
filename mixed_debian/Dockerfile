@@ -14,10 +14,10 @@ RUN apt-get update -y && apt-get install -y \
       npm \
     && apt-get clean && rm -f /var/lib/apt/lists/*_*
 
-RUN if [ "$host_ostype" = "Linux" ]; then \
-      addgroup --gid "$host_gid" "$host_group_name"; \
+RUN if [ "$host_ostype" = "Darwin" ]; then \
       adduser --uid "$host_uid" --gid "$host_gid" "$host_user_name"; \
     else \
+      addgroup --gid "$host_gid" "$host_group_name"; \
       adduser --uid "$host_uid" --gid "$host_gid" "$host_user_name"; \
     fi
 
